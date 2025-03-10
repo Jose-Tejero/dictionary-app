@@ -1,17 +1,19 @@
-import DefinitionHeader from './components/DefinitionHeader'
-import PartOfSpeach from './components/PartOfSpeach'
-import SearchBar from './components/SearchBar'
-import SettingsBar from './components/SettingsBar'
-import SourceLink from './components/SourceLink'
+import SettingsBar from "@/app/components/SettingsBar";
+import DefinitionHeader from "@/app/components/DefinitionHeader";
+import PartOfSpeach from "@/app/components/PartOfSpeach";
+import SearchBar from "@/app/components/SearchBar";
+import SourceLink from "@/app/components/SourceLink";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center h-screen">
-      <SettingsBar />
-      <SearchBar />
-      <DefinitionHeader />
-      <PartOfSpeach />  
-      <SourceLink />
+    <main className="bg-white dark:bg-slate-950 text-black dark:text-white transition">
+      <div className="flex flex-col items-center h-screen mx-auto p-4">
+        <SettingsBar />
+        <SearchBar />
+        <DefinitionHeader />
+        <PartOfSpeach />
+        <SourceLink />
+      </div>
     </main>
-  )
+  );
 }
