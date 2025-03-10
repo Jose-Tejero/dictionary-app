@@ -60,7 +60,7 @@ export default function SettingsBar() {
             <ArrowDownIcon />
           </div>
         </div>
-        <div className="border-l border-gray-200 h-6 mx-3"></div>
+        <div className="border-l border-gray-100 h-6 mx-3"></div>
         <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
           <input
             type="checkbox"
