@@ -50,13 +50,13 @@ export default function SettingsBar() {
           <select
             value={fontFamily}
             onChange={handleFontChange}
-            className="appearance-none bg-transparent border-none outline-none text-black dark:text-gray-300 pr-6 font-bold" // Agrega padding derecho para la flecha
+            className="appearance-none bg-transparent border-none outline-none text-black dark:text-gray-300 pr-6 font-bold cursor-pointer"
           >
             <option value="Sans">Sans</option>
             <option value="Serif">Serif</option>
             <option value="Mono">Mono</option>
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 cursor-pointer">
             <ArrowDownIcon />
           </div>
         </div>
