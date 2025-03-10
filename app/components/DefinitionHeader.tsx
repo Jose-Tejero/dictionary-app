@@ -1,12 +1,14 @@
+import BaselinePlayArrowIcon from "../icons/BaselinePlayArrowIcon";
+
 export default function DefinitionHeader() {
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold">Dictionary</h1>
-        <h3>Pronunciacion de la palabra</h3>
+    <div className="flex items-center justify-between w-full max-w-xl mx-auto">
+      <div className="flex flex-col justify-center">
+        <h1 className="text-6xl font-bold">keyboard</h1>
+        <h3 className="text-purple-500">/ki-bo/</h3>
       </div>
-      <button className="rounded-lg shadow-lg p-2 bg-blue-500 text-white ml-2">
-        Play
+      <button className="w-14 h-14 rounded-full bg-purple-200 flex items-center justify-center text-purple-500 text-sm cursor-pointer">
+        <BaselinePlayArrowIcon />
       </button>
     </div>
   );

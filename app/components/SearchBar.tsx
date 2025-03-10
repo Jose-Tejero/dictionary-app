@@ -2,8 +2,8 @@ import SearchIcon from "../icons/SearchIcon";
 
 export default function SearchBar() {
   return (
-    <div className="flex items-center justify-center w-full max-w-2xl mx-auto">
-      <div className="bg-gray-100 flex items-center rounded-xl pl-3 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-purple-200 transition-all w-full">
+    <div className="flex items-center justify-center w-full max-w-xl mx-auto">
+      <div className="bg-gray-100 dark:bg-slate-800 flex items-center rounded-xl pl-3 -outline-offset-1 outline-purple-200 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-purple-200 transition-all w-full">
         <input
           type="text"
           placeholder="Search"

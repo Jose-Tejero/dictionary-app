@@ -41,7 +41,7 @@ export default function SettingsBar() {
   };
 
   return (
-    <div className="flex items-center justify-between w-full max-w-2xl mx-auto">
+    <div className="flex items-center justify-between w-full max-w-xl mx-auto">
       <div>
         <BookIcon />
       </div>

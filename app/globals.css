@@ -15,7 +15,7 @@
 }
 
 .toggle-checkbox:checked + .toggle-label {
-  background-color: gray-300;
+  background-color: var(--color-slate-800);
 }
 
 body.font-sans {
