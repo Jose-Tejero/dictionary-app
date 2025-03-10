@@ -1,18 +1,6 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -30,15 +18,14 @@
   background-color: gray-300;
 }
 
-/* Estilos para las fuentes */
 body.font-sans {
-  font-family: 'Sans', sans-serif;
+  font-family: "Sans", sans-serif;
 }
 
 body.font-serif {
-  font-family: 'Serif', serif;
+  font-family: "Serif", serif;
 }
 
 body.font-mono {
-  font-family: 'Mono', monospace;
+  font-family: "Mono", monospace;
 }

@@ -1,61 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import BookIcon from "@/app/icons/BookIcon";
+import ArrowDownIcon from "@/app/icons/ArrowDownIcon";
+import SunIcon from "@/app/icons/SunIcon";
+import MoonIcon from "@/app/icons/MoonIcon";
 
 export default function SettingsBar() {
   const [darkMode, setDarkMode] = useState(false);
   const [fontFamily, setFontFamily] = useState("Sans");
-
-  const ArrowDownIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-4 w-4 text-purple-200 dark:text-purple-200"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={4}
-        d="M19 9l-7 7-7-7"
-      />
-    </svg>
-  );
-
-  const SunIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6 text-yellow-500"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.364 6.364l-.707-.707m12.728 0l-.707.707M6.364 17.636l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-      />
-    </svg>
-  );
-
-  const MoonIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6 text-gray-400"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-      />
-    </svg>
-  );
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem("darkMode");
@@ -90,9 +43,7 @@ export default function SettingsBar() {
   return (
     <div className="flex items-center justify-between w-full max-w-2xl mx-auto">
       <div>
-        <button className="rounded-lg shadow-lg p-2 bg-blue-500 text-white">
-          Historial
-        </button>
+        <BookIcon />
       </div>
       <div className="flex items-center justify-center">
         <div className="relative">
