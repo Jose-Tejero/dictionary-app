@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '@/app/globals.css'
 import { montserrat } from './ui/fonts'
+import { ReduxProvider } from './StoreProvider'
 
 export const metadata: Metadata = {
   title: 'Dictionary App',
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.className} antialiased font-sans`}>{children}</body>
+    <html lang="en">      
+      <body className={`${montserrat.className} antialiased font-sans`}>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   )
 }

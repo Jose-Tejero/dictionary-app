@@ -6,7 +6,7 @@ import ArrowDownIcon from "@/app/icons/ArrowDownIcon";
 import SunIcon from "@/app/icons/SunIcon";
 import MoonIcon from "@/app/icons/MoonIcon";
 
-export default function SettingsBar() {
+const SettingsBar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [fontFamily, setFontFamily] = useState("Sans");
 
@@ -80,3 +80,5 @@ export default function SettingsBar() {
     </div>
   );
 }
+
+export default SettingsBar;

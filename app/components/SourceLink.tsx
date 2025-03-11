@@ -1,6 +1,6 @@
-import ExternalLinkIcon from "../icons/ExternalLinkIcon";
+import ExternalLinkIcon from "@/app/icons/ExternalLinkIcon";
 
-export default function SourceLink() {
+const SourceLink = () => {
   return (
     <div className="flex items-center w-full max-w-xl mx-auto gap-4 text-gray-500">
       Source
@@ -11,3 +11,5 @@ export default function SourceLink() {
     </div>
   );
 }
+
+export default SourceLink;
