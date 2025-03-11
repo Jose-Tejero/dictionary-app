@@ -4,24 +4,19 @@ import DefinitionHeader from "@/app/components/DefinitionHeader";
 import PartOfSpeach from "@/app/components/PartOfSpeach";
 import SearchBar from "@/app/components/SearchBar";
 import SourceLink from "@/app/components/SourceLink";
-import { Word } from "./types/Word";
 import { useState } from "react";
 
 const Home = () => {
   const [word, setWord] = useState(null);
   const [phonetic, setPhonetic] = useState(null);
-  const [meaningsDefinitions, setMeaningsDefinitions] = useState(null);
-  const [meaningsSynonyms, setMeaningsSynonyms] = useState(null);
-  const [partOfSpeach, setPartOfSpeach] = useState(null);
   const [meanings, setMeanings] = useState<any[]>([]);
+  const [sourceLink, setSourceLink] = useState(null);
   const wordDatas = (data: any) => {
     console.log(data);
     setWord(data[0]?.word);
     setPhonetic(data[0]?.phonetic);
     setMeanings(data[0]?.meanings);
-    setMeaningsDefinitions(data[0]?.meanings[0].definitions);
-    setMeaningsSynonyms(data[0]?.meanings[0].synonyms);
-    setPartOfSpeach(data[0]?.meanings[0].partOfSpeech);
+    setSourceLink(data[0]?.sourceUrls[0]);
   };
 
   return (
@@ -34,7 +29,7 @@ const Home = () => {
           meanings.map((meaning: any, index: number) => (
             <PartOfSpeach key={index} partOfSpeach={meaning.partOfSpeech} meaningsDefinitions={meaning.definitions} meaningsSynonyms={meaning.synonyms} />
           ))}
-        <SourceLink />
+        <SourceLink sourceLink={sourceLink} />
       </div>
     </main>
   );

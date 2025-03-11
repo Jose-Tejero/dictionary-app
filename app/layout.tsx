@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">      
+    <html lang="en" className='bg-white dark:bg-slate-950 text-black dark:text-white transition'>      
       <body className={`${montserrat.className} antialiased font-sans`}>
         <ReduxProvider>{children}</ReduxProvider>
       </body>

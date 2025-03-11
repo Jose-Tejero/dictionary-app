@@ -10,8 +10,8 @@ const PartOfSpeach = ({ partOfSpeach, meaningsDefinitions, meaningsSynonyms }: a
         </h3>
         <div className="border-b border-gray-100 w-full mx-3"></div>
       </div>
-      <MeaningList meaningsDefinitions={meaningsDefinitions} />
-      <Synonyms meaningsSynonyms={meaningsSynonyms} />
+      {meaningsDefinitions && <MeaningList meaningsDefinitions={meaningsDefinitions} />}
+      {meaningsSynonyms.length != 0 && <Synonyms meaningsSynonyms={meaningsSynonyms} />}
     </div>
   );
 }
