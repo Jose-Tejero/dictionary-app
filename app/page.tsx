@@ -11,12 +11,14 @@ const Home = () => {
   const [phonetic, setPhonetic] = useState(null);
   const [meanings, setMeanings] = useState<any[]>([]);
   const [sourceLink, setSourceLink] = useState(null);
+  const [phonetics, setPhonetics] = useState<any[]>([]);
   const wordDatas = (data: any) => {
     console.log(data);
     setWord(data[0]?.word);
     setPhonetic(data[0]?.phonetic);
     setMeanings(data[0]?.meanings);
     setSourceLink(data[0]?.sourceUrls[0]);
+    setPhonetics(data[0]?.phonetics);
   };
 
   return (
@@ -24,7 +26,7 @@ const Home = () => {
       <div className="flex flex-col items-center h-content mx-auto p-4 gap-6">
         <SettingsBar />
         <SearchBar wordDatas={wordDatas} />
-        <DefinitionHeader word={word} phonetic={phonetic} />
+        <DefinitionHeader word={word} phonetic={phonetic} phonetics={phonetics} />
         {meanings &&
           meanings.map((meaning: any, index: number) => (
             <PartOfSpeach key={index} partOfSpeach={meaning.partOfSpeech} meaningsDefinitions={meaning.definitions} meaningsSynonyms={meaning.synonyms} />
