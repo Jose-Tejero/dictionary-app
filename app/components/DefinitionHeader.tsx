@@ -33,7 +33,7 @@ const DefinitionHeader = ({ word, phonetic, phonetics }: DefinitionHeaderProps) 
       <button
         className="w-14 h-14 rounded-full bg-purple-200 flex items-center justify-center text-purple-500 text-sm cursor-pointer"
         onClick={playAudio}
-        disabled={phonetics[0].audio ? false : true}
+        disabled={phonetics[0]?.audio ? false : true}
       >
         <BaselinePlayArrowIcon />
       </button>

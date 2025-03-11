@@ -16,7 +16,7 @@ const SearchBar = ({ wordDatas }: SearchBarProps) => {
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      setSearchTrigger(inputRef.current?.value || "");
+      inputRef.current?.value !== "" && setSearchTrigger(inputRef.current?.value || "");
     }
   };
 
@@ -25,7 +25,7 @@ const SearchBar = ({ wordDatas }: SearchBarProps) => {
   };
 
   useEffect(() => {
-    if (searchTrigger) {
+    if (searchTrigger && searchTrigger !== "") {
       wordDatas(data);
     }
   }, [data]);
